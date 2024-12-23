@@ -7,7 +7,7 @@
         <link rel="icon" type="image/x-icon" href="/images/heraldicon.png">
         <link href="css/styles.css" rel="stylesheet">
         <style>
-            ul {
+            .nav ul {
               list-style-type: none;
               margin: 0;
               padding: 0;
@@ -15,11 +15,11 @@
               background-color: #3b3b3b;
             }
 
-            li {
+            .nav li {
               float: left;
             }
             
-            li a {
+            .nav li a {
               display: block;
               color: white;
               text-align: center;
@@ -27,23 +27,44 @@
               text-decoration: none;
             }
 
-            li a:hover {
+            .nav li a:hover {
               background-color: #111;
             }
-            .active {
+            .nav .active {
                 background-color: #028957;
             }
         </style>
     </head>
     <body>
+      <div class="nav">
         <img src="images/banner.png" alt="banner" height="auto" width="100%">
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li style="float:right"><a class="active" href="#about">About</a>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#promo">Promos</a></li>
+                <li style="float:right"><a class="active" href="#contact">Contact</a>
             </ul>
         </nav>
+      </div>
+      <div>
+      <!-- Home Page -->
+      <h1 id="services">Services Offered:</h1>
+      <ul>
+        <li>Island Hopping Tours</li>
+        <li>Guided City Tours</li>
+        <li>Mountain Trekking Packages</li>
+        <li>Hotel and Transport Reservations</li>
+        <li>Customized Travel Itineraries</li>
+      </ul>
+
+      <!-- Promos Page -->
+      <h1 id="promo">Promos:</h1>
+      <p>Solve the riddle to continue...</p>
+
+      <!-- Contact Page -->
+      <h1 id="contact">Contact Us:</h1>
+      <p>Solve the riddle to continue...</p>
+      </div>
     </body>
 </html>
