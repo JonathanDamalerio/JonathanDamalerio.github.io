@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Schedule</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #3e4c59;
+            margin-top: 30px;
+        }
+
+        .schedule-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 16px;
+            border: 1px solid #f0f0f0;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        th {
+            background-color: #607d8b;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #f9fafb;
+        }
+
+        tr:nth-child(odd) td {
+            background-color: #ffffff;
+        }
+
+        .time-column {
+            background-color: #eceff1;
+            font-weight: bold;
+        }
+
+        .ctd {
+            border: none;
+        }
+
+        table td {
+            position: relative;
+        }
+
+        table td:empty::before {
+            content: "No Class";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #9e9e9e;
+        }
+
+        .schedule-container table tr:hover td {
+            background-color: #e3f2fd;
+        }
+
+        .sub-table {
+            border: none;
+        }
+
+        .sub-table td {
+            background-color: #f1f8e9;
+        }
+
+        .sub-table tr:hover td {
+            background-color: #dcedc8;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Schedule for Jonathan David's 2nd Term Course</h1>
+
+    <div class="schedule-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-column">7:00 AM - 8:15 AM</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="time-column">8:15 AM - 9:30 AM</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">CS107</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R411</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">IT103</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R411</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="time-column">9:30 AM - 10:45 AM</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">CS107</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R411</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">IT103</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R411</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="time-column">10:45 AM - 12:00 PM</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">CS122</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R502</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">CS124</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R504</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="time-column">12:00 PM - 1:15 PM</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">CS122</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R502</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">CS124</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R504</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="time-column">1:15 PM - 2:30 PM</td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">HUM039</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">V406</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">HUM039</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">V406</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">HUM039</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">V406</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="time-column">2:30 PM - 3:45 PM</td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">CS107L</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R602</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">SS086</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">V406</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">IT103L</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R604</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">SS086</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">V406</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="time-column">3:45 PM - 5:00 PM</td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">CS107L</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R602</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">CS107</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R411</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">IT103L</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R604</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="time-column">5:00 PM - 6:15 PM</td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">CS107L</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R602</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">CS122</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R502</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table class="sub-table">
+                            <tr>
+                                <td class="ctd" rowspan="2">IT103L</td>
+                                <td class="ctd">A221</td>
+                            </tr>
+                            <tr>
+                                <td class="ctd">R604</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="time-column">6:15 PM - 7:30 PM</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
