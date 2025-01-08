@@ -7,112 +7,147 @@
         <link rel="icon" type="image/x-icon" href="/images/heraldicon.png">
         <link href="css/styles.css" rel="stylesheet">
         <style>
+            body {
+                background-color: #111; /* Dark background for the entire page */
+                color: #e0e0e0; /* Light text color for contrast */
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
             .nav ul {
-              list-style-type: none;
-              margin: 0;
-              padding: 0;
-              overflow: hidden;
-              background-color: #3b3b3b;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #3b3b3b;
             }
 
             .nav li {
-              float: left;
+                float: left;
             }
             
             .nav li a {
-              display: block;
-              color: white;
-              text-align: center;
-              padding: 14px 16px;
-              text-decoration: none;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
             }
 
             .nav li a:hover {
-              background-color: #111;
+                background-color: #111;
             }
+
             .nav .active {
                 background-color: #028957;
             }
 
-            /* Header Animation */
             .nav img {
-              opacity: 0;
-              animation: fadeIn 1.5s forwards;
+                opacity: 0;
+                animation: fadeIn 1.5s forwards;
             }
 
             @keyframes fadeIn {
-              from {
-                opacity: 0;
-                transform: translateY(0);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(5px);
-              }
-
-            
-            box-sizing: border-box;
-            }
-            .sudo {
-
-                padding: 50px;
-                background-color: red;
-                transition: transform .2s;
-                width: 160px;
-                height: 160px;
-                margin: 0 auto;
-                border-radius: 29px;
+                from {
+                    opacity: 0;
+                    transform: translateY(0);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(5px);
+                }
             }
 
-            .sudo:hover {
-                -ms-transform: scale(4.6);
-                /* IE 9 */
-                -webkit-transform: scale(1.5);
-                /* Safari 3-8 */
-                transform: scale(1.5);
+            .topic {
+                padding: 20px;
+                border-radius: 8px;
+                margin: 20px auto;
+                width: 90%;
+                color: #e0e0e0; /* Light text */
+                border: 1px solid #444; /* Subtle border */
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow */
+                transition: background-color 0.3s, color 0.3s, transform 0.3s ease; /* Smooth transition */
             }
+
+            .services {
+                background-color: rgba(32, 73, 105, 0.9); /* Muted teal */
+            }
+
+            .promos {
+                background-color: rgba(42, 66, 42, 0.9); /* Deep olive green */
+            }
+
+            .contact {
+                background-color: rgba(51, 0, 0, 0.9); /* Maroon black */
+            }
+
+            /* Hover effect */
+            .topic:hover {
+                background-color: rgba(32, 73, 105, 1); /* Lighter teal on hover */
+                color: #fff; /* Change text color to white */
+                transform: scale(1.05); /* Slight zoom in (pop out) effect */
+            }
+
+            .services:hover {
+                background-color: rgba(32, 73, 105, 1); /* Lighter teal on hover */
+                transform: scale(1.05); /* Slight zoom in (pop out) effect */
+            }
+
+            .promos:hover {
+                background-color: rgba(42, 66, 42, 1); /* Lighter olive green on hover */
+                transform: scale(1.05); /* Slight zoom in (pop out) effect */
+            }
+
+            .contact:hover {
+                background-color: rgba(51, 0, 0, 1); /* Lighter maroon black on hover */
+                transform: scale(1.05); /* Slight zoom in (pop out) effect */
             }
         </style>
     </head>
     <body>
-      <div class="nav">
-        <img src="images/banner.png" alt="banner" height="auto" width="100%">
-        <nav>
+        <!-- Navigation -->
+        <div class="nav">
+            <img src="images/banner.png" alt="banner" height="auto" width="100%">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#promo">Promos</a></li>
+                    <li style="float:right"><a class="active" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Topic Sections -->
+        <div id="services" class="topic services">
+            <h1>Services Offered:</h1>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#promo">Promos</a></li>
-                <li style="float:right"><a class="active" href="#contact">Contact</a>
+                <li>Island Hopping Tours</li>
+                <li>Guided City Tours</li>
+                <li>Mountain Trekking Packages</li>
+                <li>Hotel and Transport Reservations</li>
+                <li>Customized Travel Itineraries</li>
             </ul>
-        </nav>
-      </div>
-      <div>
-      <!-- Home Page -->
-      <h1 id="services">Services Offered:</h1>
-      <ul>
-        <li>Island Hopping Tours</li>
-        <li>Guided City Tours</li>
-        <li>Mountain Trekking Packages</li>
-        <li>Hotel and Transport Reservations</li>
-        <li>Customized Travel Itineraries</li>
-      </ul>
+        </div>
 
-      <!-- Promos Page -->
-      <h1 id="promo">Promos:</h1>
-      <ul>
-        <li>3+1 Free" group packages.</li>
-        <li>20% discount on bookings made at least a month in advance.</li>
-        <li>Special weekend rates for island hopping in Cebu.</li>
-      </ul>
+        <div id="promo" class="topic promos">
+            <h1>Promos:</h1>
+            <ul>
+                <li>"3+1 Free" group packages.</li>
+                <li>20% discount on bookings made at least a month in advance.</li>
+                <li>Special weekend rates for island hopping in Cebu.</li>
+            </ul>
+        </div>
 
-      <!-- Contact Page -->
-      <h1 id="contact">Contact Us:</h1>
-      <p>Facebook: <a href="facebook.com">Explore PH Tours</a></p>
-      <p>Instagram: <a href=instagram.com">Explore PH Tours</a></p>
-      <strong>Contact Details for Branches:</strong>
-      <p><strong>Manila :</strong> <a href="tel:+639175123456">(+63) 123-4567</a></p>
-      <p><strong>Cebu :</strong> <a href="tel:+639175123456">(+63) 234-5678</a></p>
-      <p><strong>Davao :</strong> <a href="tel:+639175123456">(+63) 345-6789</a></p>
-      </div>
+        <div id="contact" class="topic contact">
+            <h1>Contact Us:</h1>
+            <p>Facebook: <a href="facebook.com">Explore PH Tours</a></p>
+            <p>Instagram: <a href="instagram.com">Explore PH Tours</a></p>
+            <strong>Contact Details for Branches:</strong>
+            <p><strong>Manila :</strong> <a href="tel:+639175123456">(+63) 123-4567</a></p>
+            <p><strong>Cebu :</strong> <a href="tel:+639175123456">(+63) 234-5678</a></p>
+            <p><strong>Davao :</strong> <a href="tel:+639175123456">(+63) 345-6789</a></p>
+        </div>
     </body>
 </html>
