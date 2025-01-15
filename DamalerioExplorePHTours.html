@@ -59,49 +59,60 @@
                 }
             }
 
+            .button {
+                border-radius: 10px;
+                border-width: 2px;
+                border-style: solid;
+                background-color: white;
+                width: fit-content;
+                padding: 10px;
+                transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+            }
+
+            .button:hover {
+                transform: scale(1.1);
+                background-color: #f0f0f0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+
             .topic {
                 padding: 20px;
                 border-radius: 8px;
                 margin: 20px auto;
                 width: 90%;
-                color: #e0e0e0; /* Light text */
-                border: 1px solid #444; /* Subtle border */
-                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow */
-                transition: background-color 0.3s, color 0.3s, transform 0.3s ease; /* Smooth transition */
+                color: #e0e0e0;
+                border: 1px solid #444;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+                transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
             }
 
             .services {
-                background-color: rgba(32, 73, 105, 0.9); /* Muted teal */
+                background-color: rgba(32, 73, 105, 0.9);
             }
 
             .promos {
-                background-color: rgba(42, 66, 42, 0.9); /* Deep olive green */
+                background-color: rgba(42, 66, 42, 0.9);
             }
 
             .contact {
-                background-color: rgba(51, 0, 0, 0.9); /* Maroon black */
+                background-color: rgba(51, 0, 0, 0.9);
             }
 
-            /* Hover effect */
             .topic:hover {
-                background-color: rgba(32, 73, 105, 1); /* Lighter teal on hover */
-                color: #fff; /* Change text color to white */
-                transform: scale(1.05); /* Slight zoom in (pop out) effect */
+                background-color: rgba(32, 73, 105, 1);
+                color: #fff;
+                transform: scale(1.05);
             }
 
             .services:hover {
-                background-color: rgba(32, 73, 105, 1); /* Lighter teal on hover */
-                transform: scale(1.05); /* Slight zoom in (pop out) effect */
+                background-color: rgba(32, 73, 105, 1);
+                transform: scale(1.05);
             }
 
             .promos:hover {
-                background-color: rgba(42, 66, 42, 1); /* Lighter olive green on hover */
-                transform: scale(1.05); /* Slight zoom in (pop out) effect */
-            }
-
-            .contact:hover {
-                background-color: rgba(51, 0, 0, 1); /* Lighter maroon black on hover */
-                transform: scale(1.05); /* Slight zoom in (pop out) effect */
+                background-color: rgba(42, 66, 42, 1);
+                transform: scale(1.05);
             }
         </style>
     </head>
@@ -140,14 +151,29 @@
             </ul>
         </div>
 
-        <div id="contact" class="topic contact">
-            <h1>Contact Us:</h1>
-            <p>Facebook: <a href="facebook.com">Explore PH Tours</a></p>
-            <p>Instagram: <a href="instagram.com">Explore PH Tours</a></p>
-            <strong>Contact Details for Branches:</strong>
-            <p><strong>Manila :</strong> <a href="tel:+639175123456">(+63) 123-4567</a></p>
-            <p><strong>Cebu :</strong> <a href="tel:+639175123456">(+63) 234-5678</a></p>
-            <p><strong>Davao :</strong> <a href="tel:+639175123456">(+63) 345-6789</a></p>
-        </div>
+        <section style="text-align: center; padding: 50px; background-color: #4CAF50; border-top: 5px solid #fff; border-bottom: 5px solid #fff;">
+            <h1 style="color: white;">Book Your Next Adventure Today</h1>
+            <p style="color: white;">
+                Explore the Philippines like never before with our exciting packages.
+                Limited slots available for promo deals. Don't miss out!
+            </p>
+            <button class="button" id="booknow" style="background-color: #fff; color: #4CAF50; border-color: #4CAF50;">Book Now</button>
+        </section>               
+
+        <section id="contact">
+            <h3 style="text-align: center; color: white;">Contact Details:</h3>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; text-align: left; color: white; margin-top: 20px;">
+                <div style="padding-right: 50px;">
+                    <p><strong>Manila:</strong><br />(+63) 123-4567</p>
+                </div>
+                <div style="padding-right: 50px;">
+                    <p><strong>Cebu:</strong><br />(+63) 234-5678</p>
+                </div>
+                <div style="padding-right: 50px;">
+                    <p><strong>Davao:</strong><br />(+63) 345-6789</p>
+                </div>
+            </div>
+            <div style="border-bottom: 2px solid #e0e0e0; margin-top: 30px;"></div>
+        </section>               
     </body>
 </html>
