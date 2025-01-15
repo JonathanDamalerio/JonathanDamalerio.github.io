@@ -5,11 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Explore PH Tours</title>
         <link rel="icon" type="image/x-icon" href="/images/logo.png">
-        <link href="css/styles.css" rel="stylesheet">
         <style>
             body {
-                background-color: #111; /* Dark background for the entire page */
-                color: #e0e0e0; /* Light text color for contrast */
+                background-color: #111;
+                color: #e0e0e0;
                 font-family: Arial, sans-serif;
                 margin: 0;
                 padding: 0;
@@ -75,16 +74,23 @@
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             }
 
+            .topic-container {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                margin: 20px auto;
+                flex-wrap: wrap;
+            }
 
             .topic {
+                flex: 1;
                 padding: 20px;
                 border-radius: 8px;
-                margin: 20px auto;
-                width: 90%;
                 color: #e0e0e0;
                 border: 1px solid #444;
                 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
                 transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
+                margin: 10px;
             }
 
             .services {
@@ -95,8 +101,8 @@
                 background-color: rgba(42, 66, 42, 0.9);
             }
 
-            .contact {
-                background-color: rgba(51, 0, 0, 0.9);
+            .popular {
+                background-color: rgba(68, 10, 0, 0.9);
             }
 
             .topic:hover {
@@ -114,6 +120,12 @@
                 background-color: rgba(42, 66, 42, 1);
                 transform: scale(1.05);
             }
+
+            .popular:hover {
+                background-color: rgba(81, 12, 0, 0.918);
+                transform: scale(1.05);
+            }
+
         </style>
     </head>
     <body>
@@ -131,24 +143,35 @@
         </div>
 
         <!-- Topic Sections / Parts -->
-        <div id="services" class="topic services">
-            <h1>Services Offered:</h1>
-            <ul>
-                <li>Island Hopping Tours</li>
-                <li>Guided City Tours</li>
-                <li>Mountain Trekking Packages</li>
-                <li>Hotel and Transport Reservations</li>
-                <li>Customized Travel Itineraries</li>
-            </ul>
-        </div>
+        <div class="topic-container">
+            <div id="services" class="topic services">
+                <h1>Services Offered:</h1>
+                <ul>
+                    <li>Island Hopping Tours</li>
+                    <li>Guided City Tours</li>
+                    <li>Mountain Trekking Packages</li>
+                    <li>Hotel and Transport Reservations</li>
+                    <li>Customized Travel Itineraries</li>
+                </ul>
+            </div>
 
-        <div id="promo" class="topic promos">
-            <h1>Promos:</h1>
-            <ul>
-                <li>"3+1 Free" group packages.</li>
-                <li>20% discount on bookings made at least a month in advance.</li>
-                <li>Special weekend rates for island hopping in Cebu.</li>
-            </ul>
+            <div id="promo" class="topic promos">
+                <h1>Promos:</h1>
+                <ul>
+                    <li>"3+1 Free" group packages.</li>
+                    <li>20% discount on bookings made at least a month in advance.</li>
+                    <li>Special weekend rates for island hopping in Cebu.</li>
+                </ul>
+            </div>
+
+            <div id="popular" class="topic popular">
+                <h1>Popular Packages</h1>
+                <ul>
+                    <li><strong>Manila:</strong> Historic Intramuros Tour with Food Crawl</li>
+                    <li><strong>Cebu:</strong> Whale Shark Watching and Kawasan Falls Adventure</li>
+                    <li><strong>Davao:</strong> Mt. Apo Climbing Experience</li>
+                </ul>
+            </div>
         </div>
 
         <section style="text-align: center; padding: 50px; background-color: #4CAF50; border-top: 5px solid #fff; border-bottom: 5px solid #fff;">
