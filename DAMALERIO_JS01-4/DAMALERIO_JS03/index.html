@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Change Password</h1>
+    <p>New Password: 
+        <input id= "newpass" type="password" onpaste="return false" required="true">
+    </p>
+    <p>Confirm Password:
+        <input id= "conpass" type="password" required="true"> </p>
+    <button id="submitButton" onclick="check()">Submit</button>
+
+    <p id="Message" style="opacity: 0;"></p>
+    <input type="text" id="correct" value="Password changed successfully!" style="opacity: 0;">
+    <input type="text" id="wrong" value="Passwords do not match. Please try again." style="opacity: 0;">
+
+<script src="script.js"></script>
+</body>
+</html>
