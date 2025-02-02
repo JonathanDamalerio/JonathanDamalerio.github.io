@@ -1,17 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My First Web Page</title>
-<link rel="icon" type="image/x-icon" href="/images/heraldicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan David Portfolio</title>
+    <link rel="stylesheet" href="CoursePortfoliostyles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
-<h1>Hi! I am Jonathan David B. Damalerio</h1>
-<h2>HTML Tasks</h2>
-    <ol>
-        <li><a href="https://jonathandamalerio.github.io/DamalerioExplorePHTours.html">Damalerio Explore PH Tours</a></li>
-        <li><a href="https://jonathandamalerio.github.io/DamalerioCourseSchedule.html">Damalerio 2nd Term Course Schedule</a></li>
-    </ol>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <nav id="navbar">
+        <div class="nav-content container">
+            <div class="logo">Jonathan David</div>
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#skills"><i class="fas fa-laptop-code"></i> Skills</a></li>
+                <li><a href="#awards"><i class="fas fa-trophy"></i> Awards</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="container">
+            <h1>Jonathan David</h1>
+            <p id="typewriter"></p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hi! I'm Jonathan David B. Damalerio, and this portfolio represents my journey through my web programming course. It showcases the skills and knowledge I've developed, featuring key projects that highlight my growth in web development. Each project reflects my ability to design, develop, and enhance functional, visually engaging websites using HTML, CSS, and JavaScript.</p>
+                    <br>
+                    <p>I’m currently a second-year Computer Science student at MMCM.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/jd.jpg" alt="Jonathan David">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card" data-tilt>
+                    <img src="images/portfolio.png" alt="E-commerce Platform" class="project-image">
+                    <div class="project-content">
+                        <h3>Personal Portfolio</h3>
+                        <p>A web-based portfolio showcasing programming projects.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                            <a href="https://jonathandamalerio.github.io" class="button">VIEW THE PROJECT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-tilt>
+                    <img src="images/explore.png" alt="Social Dashboard" class="project-image">
+                    <div class="project-content">
+                        <h3>Damalerio - Explore PH Tours</h3>
+                        <p>A booking system for a travel agency that allows users to browse destinations, and book trips.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <a href="https://jonathandamalerio.github.io/DamalerioExplorePHTours.html" class="button">VIEW THE PROJECT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-tilt>
+                    <img src="images/sched.png" alt="Weather App" class="project-image">
+                    <div class="project-content">
+                        <h3>Damalerio Course Schedule</h3>
+                        <p>A personal schedule tracker that organizes and displays your course timetable, helping you manage class times and avoid conflicts.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <a href="https://jonathandamalerio.github.io/DamalerioCourseSchedule.html" class="button">VIEW THE PROJECT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-content">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li><i class="fab fa-html5"></i> HTML</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li><i class="fas fa-database"></i> MySQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fab fa-java"></i> Java</li>
+                        <li><i class="fas fa-code"></i> C#</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="awards">
+        <div class="container">
+            <h2>Certificates & Awards</h2>
+            <div class="awards-grid">
+                <div class="award-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Introduction to HTML</h3>
+                    <p>Awarded for completing the Lesson 1 of IT103.A221.2T.24.25 in CodeChum</p>
+                </div>
+                <div class="award-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Styling Web Pages with CSS</h3>
+                    <p>Awarded for completing the Lesson 2 of IT103.A221.2T.24.25 in CodeChum</p>
+                </div>
+                <div class="award-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Introduction to JavaScript</h3>
+                    <p>Awarded for completing the Lesson 3 of IT103.A221.2T.24.25 in CodeChum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jonathan David B. Damalerio</p>
+            <div class="social-links">
+                <a href="https://github.com/JonathanDamalerio/JonathanDamalerio.github.io" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jonathandaviddamalerio" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/jonathan.damalerio.9" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="CoursePortfolioscript.js"></script>
 </body>
 </html>
