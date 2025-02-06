@@ -1,0 +1,121 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css"> 
+<title>Random Quote Generator</title> 
+    <style> 
+        body { 
+    font-family: 'Arial', sans-serif; 
+    text-align: center; 
+    margin-top: 50px; 
+    background-color: #f0f8ff; /* Light, soft background color */
+    color: #333; /* Dark text color for readability */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; /* Center vertically */
+    margin: 0;
+}
+
+h1 { 
+    font-size: 2.5em; 
+    color: #007bff; /* Match button color */
+    margin-bottom: 20px; 
+}
+
+#quoteDisplay { 
+    background-color: white; 
+    padding: 30px 40px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 80%; 
+    max-width: 600px; /* Limit max width for large screens */
+    margin: 20px 0; 
+}
+
+#quote { 
+    font-size: 1.6em; 
+    font-weight: bold; 
+    color: #444; /* Darker text for better contrast */
+    line-height: 1.5; 
+}
+
+#author { 
+    font-style: italic; 
+    color: #777; 
+    margin-top: 10px; 
+}
+
+button { 
+    padding: 12px 25px; 
+    font-size: 1.2em; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin-top: 20px; 
+}
+
+button:hover { 
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+button:active { 
+    transform: scale(0.98); /* Slight scale effect on click */
+} 
+    </style> 
+</head> 
+<body> 
+    <h1>Random Quote Generator</h1> 
+    <div id="quoteDisplay"> 
+        <p id="quote">Click the button to get a random quote!</p> 
+        <p id="author"></p> 
+    </div> 
+    <button id="newQuoteBtn">Get New Quote</button> 
+    <script> 
+        const quoteElement = document.getElementById('quote'); 
+        const authorElement = document.getElementById('author'); 
+        const button = document.getElementById('newQuoteBtn'); 
+ 
+        // Function to fetch a random quote 
+        function fetchQuote() { 
+            // Show loading message while fetching 
+            quoteElement.textContent = 'Loading quote...'; 
+            authorElement.textContent = ''; 
+ 
+            // Fetch all quotes from the DummyJSON API 
+            fetch('https://dummyjson.com/quotes') 
+                .then(response => { 
+                    if (!response.ok) { 
+                        throw new Error(`HTTP error! status: ${response.status}`);  
+} 
+return response.json(); 
+}) 
+.then(data => { 
+// Get a random quote from the list of quotes 
+const randomIndex = Math.floor(Math.random() * 
+data.quotes.length); 
+const randomQuote = data.quotes[randomIndex]; 
+// Display the quote and author 
+quoteElement.textContent = `"${randomQuote.quote}"`; 
+authorElement.textContent = `- ${randomQuote.author}`; 
+}) 
+.catch(error => { 
+// Handle any errors that occur during the fetch 
+console.error('Error fetching quote:', error); 
+quoteElement.textContent = 'Failed to load quote. Please try again.'; 
+authorElement.textContent = ''; 
+}); 
+} 
+// Fetch a quote when the button is clicked 
+button.addEventListener('click', fetchQuote); 
+// Fetch a quote when the page loads 
+fetchQuote(); 
+</script> 
+</body> 
+</html>
